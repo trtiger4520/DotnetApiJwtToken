@@ -1,0 +1,20 @@
+// REST Client https://github.com/Huachao/vscode-restclient
+
+@baseUrl = http://localhost:5001/api
+@token = bearer {{login.response.body.token}}
+
+###
+# @name login
+POST {{baseUrl}}/account/login
+Content-Type: application/json
+
+{
+    "UserName": "User",
+    "Password": "123",
+    "RememberMe": false
+}
+
+###
+
+GET {{baseUrl}}/account/whoami
+Authorization: {{token}}
