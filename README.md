@@ -1,2 +1,2 @@
 # DotnetApiJwtToken
-dotnet ppi project with JWT token
+dotnet api project with JWT token
